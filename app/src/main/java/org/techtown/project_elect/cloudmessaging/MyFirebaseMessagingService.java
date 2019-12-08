@@ -24,14 +24,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService
     {
         if (remoteMessage.getData().size() > 0) {
             Log.d("namjinha", "Message data payload: " + remoteMessage.getData());
-
-            if (false)
-            {
-                // For long-running tasks (10 seconds or more) use WorkManager.
-                scheduleJob();
-            }
-            else
-            {
+                if (false)
+                {
+                    // For long-running tasks (10 seconds or more) use WorkManager.
+                    scheduleJob();
+                }
+                else
+                {
                 // Handle message within 10 seconds
                 handleNow(remoteMessage);
             }
