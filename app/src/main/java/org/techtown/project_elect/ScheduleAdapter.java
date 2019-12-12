@@ -15,56 +15,47 @@ public class ScheduleAdapter extends BaseAdapter {
 
     LayoutInflater inflater = null;
     private List<Schedule> m_oData = null;
+    private Context context;
     private int nListCnt = 0;
 
-    public ScheduleAdapter(List<Schedule> _oData)
+    public ScheduleAdapter(List<Schedule> _oData, Context context)
     {
-        m_oData = _oData;
-        nListCnt = m_oData.size();
+        this.m_oData = _oData;
+        this.nListCnt = m_oData.size();
+        this.context = context;
     }
 
     @Override
     public int getCount()
     {
-        Log.i("TAG", "getCount");
-        return nListCnt;
+        return m_oData.size();
     }
 
     @Override
     public Object getItem(int position)
     {
-        return null;
+        return m_oData.get(position);
     }
 
     @Override
     public long getItemId(int position)
     {
-        return 0;
+        return position;
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup parent)
+    public View getView(int position, View view, ViewGroup parent)
     {
-        if (convertView == null)
-        {
-            final Context context = parent.getContext();
-            if (inflater == null)
-            {
-                inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            }
-            convertView = inflater.inflate(R.layout.schedule, parent, false);
-        }
-
-        TextView mday = (TextView) convertView.findViewById(R.id.day);
-        TextView mtime = (TextView) convertView.findViewById(R.id.time);
-        TextView mtitle = (TextView) convertView.findViewById(R.id.title);
-        TextView mcontent = (TextView) convertView.findViewById(R.id.content);
+        View v = View.inflate(context, R.layout.schedule, null);
+        TextView mday = (TextView)v.findViewById(R.id.day);
+        TextView mtime = (TextView) v.findViewById(R.id.time);
+        TextView mtitle = (TextView) v.findViewById(R.id.title);
+        TextView mcontent = (TextView) v.findViewById(R.id.content);
 
         mday.setText(m_oData.get(position).day);
-        mtitle.setText(m_oData.get(position).time);
+        mtime.setText(m_oData.get(position).time);
         mtitle.setText(m_oData.get(position).title);
         mcontent.setText(m_oData.get(position).content);
-        return convertView;
+        return v;
     }
-
 }

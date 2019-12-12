@@ -26,7 +26,7 @@ public class scheduleActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference ref;
 
-    ListView schedule_listview;
+    ListView listview;
     List<Schedule> oData;
     ScheduleAdapter adapter;
     @Override
@@ -40,8 +40,8 @@ public class scheduleActivity extends AppCompatActivity {
         final Button more_button = (Button)findViewById(R.id.more);
 
         // 각각의 버튼을 눌렀을 때 프레그 먼트를 생성해준다.
-        final LinearLayout frag = (LinearLayout)findViewById(R.id.frag);
-
+       // final LinearLayout frag = (LinearLayout)findViewById(R.id.frag);
+        /*
         schedule_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,26 +82,31 @@ public class scheduleActivity extends AppCompatActivity {
                 //fragmentTransaction.replace(R.id.fragment, new ScheduleFragment());
             }
         });
+         */
+
         database = FirebaseDatabase.getInstance();
         ref = database.getReference("User");
-        schedule_listview = findViewById(R.id.schedule_listview);
+        listview = findViewById(R.id.listview);
         oData = new ArrayList<>();
+
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                oData.clear();
+                // 파이어베이스로 부터 가져옴.
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Schedule user = snapshot.getValue(Schedule.class);
-                    oData.add(user);
+                    Schedule sc = snapshot.getValue(Schedule.class);
+                    oData.add(sc);      // 가져온 데이터를 리스트에 넣고
+                    Log.i("asd", "안된다능");
                 }
-               // adapter.notifyDataSetChanged();
+                adapter.notifyDataSetChanged(); // 리스트 저장 및 새로고침.
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.w("MainActivity", "loadPost:onCancelled", databaseError.toException());
+                Log.w("scheduleActivity", "loadPost:onCancelled", databaseError.toException());
             }
         });
-        schedule_listview = (ListView)findViewById(R.id.schedule_listview);
-        ScheduleAdapter adapter = new  ScheduleAdapter(oData);
-        schedule_listview.setAdapter(adapter);
+        adapter = new ScheduleAdapter(oData, this);
+        listview.setAdapter(adapter);
     }
 }

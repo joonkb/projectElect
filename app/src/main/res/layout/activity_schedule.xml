@@ -13,7 +13,6 @@
         android:orientation="horizontal"
         android:layout_marginTop="5dp">
 
-
         <Button
             android:id="@+id/shedule_list"
             android:layout_width="wrap_content"
@@ -68,27 +67,13 @@
             android:paddingLeft="150dp"
             android:text="일정 사항" />
     </LinearLayout>
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/frag">
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/schedule_listview"/>
-        </LinearLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/fragment">
-        </RelativeLayout>
-
-
     </FrameLayout>
 </LinearLayout>
