@@ -55,17 +55,14 @@
         android:orientation="horizontal"
         android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal">
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button"
-            />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
+            android:layout_height="match_parent"
+            android:textSize ="15sp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_blue"
+            android:text="About Us" />
     </LinearLayout>
 </LinearLayout>
