@@ -58,7 +58,7 @@ public class scheduleActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 frag.setVisibility(View.GONE);
-                // 버튼의 색상을 변화시킨다.
+                fragment.setVisibility(View.VISIBLE);
                 major_button.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 schedule_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 more_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -72,6 +72,7 @@ public class scheduleActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 frag.setVisibility(View.GONE);
+                fragment.setVisibility(View.VISIBLE);
                 more_button.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 schedule_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 major_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
