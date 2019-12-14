@@ -34,6 +34,7 @@
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:textSize = "15sp"
             android:id="@+id/univSpinner"
             android:paddingRight="10dp">
         </Spinner>
@@ -42,6 +43,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:id="@+id/majorSpinner"
+            android:textSize = "15sp"
             android:paddingRight="10dp">
         </Spinner>
 
@@ -66,6 +68,5 @@
             android:divider = "#ffffff"
             android:id="@+id/major_candidate">
         </ListView>
-
     </LinearLayout>
 </LinearLayout>

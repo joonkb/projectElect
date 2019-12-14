@@ -84,6 +84,14 @@ public class MajorFragment extends Fragment {
                     majorAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.major_it, android.R.layout.simple_spinner_item);
                     majorSpinner.setAdapter(majorAdapter);
                 }
+                else if(selectedUniv.equals("사범대학")){
+                    majorAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.major_edu, android.R.layout.simple_spinner_item);
+                    majorSpinner.setAdapter(majorAdapter);
+                }
+                else if(selectedUniv.equals("경영대학")){
+                    majorAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.major_management, android.R.layout.simple_spinner_item);
+                    majorSpinner.setAdapter(majorAdapter);
+                }
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
