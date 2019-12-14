@@ -80,7 +80,7 @@ public class MajorFragment extends Fragment {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selectedUniv = univSpinner.getSelectedItem().toString();
-                if(selectedUniv.equals("IT대학")){
+                if(selectedUniv.equals("ITㅇ대학")){
                     majorAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.major_it, android.R.layout.simple_spinner_item);
                     majorSpinner.setAdapter(majorAdapter);
                 }
