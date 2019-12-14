@@ -71,8 +71,7 @@
                             android:layout_width="150dp"
                             android:layout_height="288dp"
                             android:layout_margin="10dp"
-                            android:layout_weight="1"
-                            app:srcCompat="@drawable/c_1" />
+                            android:layout_weight="1" />
 
                         <LinearLayout
                             android:layout_width="200dp"
@@ -114,15 +113,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="10dp"
                                 android:text="•2000 강원도 원주 출생\n•2019 강원대학교 사회과학대학 단과대학 운영위원회 위원장\n•강원대학교 사회과학대학 댄스동아리 회장" />
-
                         </LinearLayout>
-
                     </LinearLayout>
-
-
                 </LinearLayout>
-
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -142,8 +135,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/home" />
+                        android:layout_weight="1" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -166,8 +158,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/po" />
+                        android:layout_weight="1" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -190,8 +181,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/home" />
+                        android:layout_weight="1" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -214,8 +204,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/home" />
+                        android:layout_weight="1" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -251,8 +240,7 @@
                         android:layout_width="150dp"
                         android:layout_height="288dp"
                         android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/c_1" />
+                        android:layout_weight="1" />
 
                     <LinearLayout
                         android:layout_width="200dp"
@@ -322,8 +310,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/home" />
+                    android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -346,8 +333,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/po" />
+                    android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -370,8 +356,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/home" />
+                    android:layout_weight="1" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -394,8 +379,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/home" />
+                    android:layout_weight="1" />
 
             </LinearLayout>
         </LinearLayout>

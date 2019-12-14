@@ -50,8 +50,7 @@
                         android:layout_width="130dp"
                         android:layout_height="130dp"
                         android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/c_1" />
+                        android:layout_weight="1" />
 
 
                     <LinearLayout
@@ -95,36 +94,28 @@
                         android:layout_width="130dp"
                         android:layout_height="130dp"
                         android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        app:srcCompat="@drawable/c_2" />
-
+                        android:layout_weight="1" />
                     <LinearLayout
                         android:layout_width="250dp"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="부학생회장 후보 "
                             android:textStyle="bold" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="전기전자공학과 17학번 박전기 "
                             android:textStyle="bold" />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             android:text="•1998 경기도 파주 출생\n•2018 강원대학교 IT대학 전기전자공학과 홍보차장\n•2019 강원대학교 IT대학 학생회 복지차장" />
-
                     </LinearLayout>
-
                 </LinearLayout>
-
             </LinearLayout>
 
             <LinearLayout
@@ -132,7 +123,6 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:orientation="vertical">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -141,14 +131,11 @@
                     android:textColor="#003333"
                     android:textSize="15sp"
                     android:textStyle="bold" />
-
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/home" />
-
+                    android:layout_weight="1" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -157,7 +144,6 @@
                     android:textColor="#003333"
                     android:textSize="30sp"
                     android:textStyle="bold" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -166,14 +152,11 @@
                     android:layout_weight="1"
                     android:text="-예비군 셔틀버스\n-야식마차\n-보조배터리,충전기,우산,공학용계산기 대여\n-신입생 및 재학생 전공서적 대여"
                     android:textStyle="bold" />
-
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/po" />
-
+                    android:layout_weight="1" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -182,7 +165,6 @@
                     android:textColor="#003333"
                     android:textSize="30sp"
                     android:textStyle="bold" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -191,14 +173,11 @@
                     android:layout_weight="1"
                     android:text="-카카오톡 플러스 친구\n-페이스북\n-학생회비 사용내역 공개"
                     android:textStyle="bold" />
-
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/home" />
-
+                    android:layout_weight="1" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -207,7 +186,6 @@
                     android:textColor="#003333"
                     android:textSize="30sp"
                     android:textStyle="bold" />
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -216,18 +194,12 @@
                     android:layout_weight="1"
                     android:text="-인스타그램 개설\n-담요,바구니 및 돗자리 대여"
                     android:textStyle="bold" />
-
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
-                    app:srcCompat="@drawable/home" />
-
+                    android:layout_weight="1" />
             </LinearLayout>
-
         </LinearLayout>
-
     </ScrollView>
-
 </LinearLayout>

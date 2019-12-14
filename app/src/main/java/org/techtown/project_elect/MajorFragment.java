@@ -4,11 +4,16 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
 
 
 /**
@@ -28,9 +33,7 @@ public class MajorFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     private OnFragmentInteractionListener mListener;
-
     public MajorFragment() {
         // Required empty public constructor
     }
@@ -52,6 +55,10 @@ public class MajorFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+    private ArrayAdapter univAdapter;
+    private ArrayAdapter majorAdapter;
+    private Spinner univSpinner;
+    private Spinner majorSpinner;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,6 +67,36 @@ public class MajorFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+    }
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        univSpinner = (Spinner)getView().findViewById(R.id.univSpinner);
+        majorSpinner = (Spinner)getView().findViewById(R.id.majorSpinner);
+        univAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.University, android.R.layout.simple_selectable_list_item);
+        univSpinner.setAdapter(univAdapter);
+
+        univSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedUniv = univSpinner.getSelectedItem().toString();
+                if(selectedUniv.equals("IT대학")){
+                    majorAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.major_it, android.R.layout.simple_spinner_item);
+                    majorSpinner.setAdapter(majorAdapter);
+                }
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        Button searching_btn = (Button)getView().findViewById(R.id.search_btn);
+        searching_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @Override
