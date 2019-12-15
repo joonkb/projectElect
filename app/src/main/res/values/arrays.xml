@@ -29,6 +29,96 @@
         <item>관광경영학과</item>
         <item>국제무역학과</item>
     </string-array>
+    <string-array name="major_agriculture">
+        <item>농업생명과학 대학 학생회</item>
+        <item>지역건설 공학과</item>
+        <item>농생명산업학전공</item>
+        <item>시설농업학전공</item>
+        <item>바이오시스템기계공학전공</item>
+        <item>전공식품생명공학전공</item>
+        <item>식물자원응용과학전공</item>
+        <item>응용생물학전공</item>
+        <item>원예과학전공</item>
+        <item>농업자원경제학전공</item>
+        <item>바이오자원환경학전공</item>
+        <item>에코환경과학전공</item>
+    </string-array>
+    <string-array name="major_animal">
+        <item>동물생명과학 대학 학생회</item>
+        <item>동물산업융합학과</item>
+        <item>동물응용과학과</item>
+        <item>동물자원과학과</item>
+    </string-array>
+    <string-array name="major_social">
+        <item>사회과학대학 학생회</item>
+        <item>행정학전공</item>
+        <item>심리학전공</item>
+        <item>문화인류학과</item>
+        <item>사회학과</item>
+        <item>신문방송학과</item>
+        <item>정치외교학과</item>
+        <item>사회학과</item>
+
+    </string-array>
+    <string-array name="major_veterinary">
+        <item>수의과학 대학 학생회</item>
+        <item>수의예과</item>
+        <item>수의학과</item>
+
+    </string-array>
+    <string-array name="major_natural">
+        <item>자연과학대학 학생회</item>
+        <item>지구물리학전공</item>
+        <item>지질학전공</item>
+        <item>생화학전공</item>
+        <item>화학전공</item>
+        <item>물리학과</item>
+        <item>생명과학과</item>
+        <item>수학과</item>
+
+    </string-array>
+
+    <string-array name="major_humanities">
+        <item>인문대학 학생회</item>
+        <item>국어국문학전공</item>
+        <item>영어영문학전공</item>
+        <item>불어불문학전공</item>
+        <item>독어독문학전공</item>
+        <item>중어중문학전공</item>
+        <item>일본학전공철학전공</item>
+        <item>사학전공</item>
+    </string-array>
+    <string-array name="major_caluture">
+        <item>문화예술공과대학 학생회</item>
+        <item>건축공학전공</item>
+        <item>토목공학전공</item>
+        <item>환경공학전공</item>
+        <item>기계의용공학전공</item>
+        <item>메카트로닉스공학</item>
+        <item>에너지자원공학전공</item>
+        <item>산업공학전공</item>
+        <item>화학공학전공</item>
+        <item>생물공학전공</item>
+        <item>디자인학과</item>
+        <item>무용학과</item>
+        <item>미술학과</item>
+        <item>스포츠과학과</item>
+        <item>음악학과</item>
+        <item>영상문화학과</item>
+
+    </string-array>
+
+    <string-array name="major_dendrology">
+        <item>산림환경과학대학 학생회</item>
+        <item>산림경영학전공</item>
+        <item>산림자원학전공</item>
+        <item>산림환경보호학전공</item>
+        <item>산림소재공학</item>
+        <item>제지공학전공</item>
+        <item>생태조경디자인학과</item>
+
+    </string-array>
+
     <string-array name="University">
         <item>경영대학</item>
         <item>농업생명과학대학</item>
@@ -36,9 +126,8 @@
         <item>사범대학</item>
         <item>사회과학대학</item>
         <item>IT대학</item>
-        <item>동물생명과학대학</item>
         <item>수의과학대학</item>
-        <item>간호대학</item>
+        <item>자연과학대학</item>
         <item>인문대학</item>
         <item>문화예술공과대학</item>
         <item>산림환경과학대학</item>

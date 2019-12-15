@@ -39,17 +39,19 @@ public class scheduleActivity extends AppCompatActivity {
         final Button more_button = (Button)findViewById(R.id.more);
 
         // 각각의 버튼을 눌렀을 때 프레그 먼트를 생성해준다.
-        final LinearLayout frag = (LinearLayout)findViewById(R.id.frag);
-        final RelativeLayout fragment = (RelativeLayout)findViewById(R.id.fragment);
+
         schedule_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // ListView 부분을 보이게 해준다.
-                frag.setVisibility(View.VISIBLE);
-                fragment.setVisibility(View.GONE);
+
                 schedule_button.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 major_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 more_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment, new ListFragment());
+                fragmentTransaction.commit();
             }
         });
 
@@ -57,8 +59,7 @@ public class scheduleActivity extends AppCompatActivity {
           major_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                frag.setVisibility(View.GONE);
-                fragment.setVisibility(View.VISIBLE);
+
                 major_button.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 schedule_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 more_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -71,8 +72,7 @@ public class scheduleActivity extends AppCompatActivity {
         more_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                frag.setVisibility(View.GONE);
-                fragment.setVisibility(View.VISIBLE);
+
                 more_button.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 schedule_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 major_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
@@ -81,28 +81,7 @@ public class scheduleActivity extends AppCompatActivity {
                 fragmentTransaction.replace(R.id.fragment, new ScheduleFragment());
             }
         });
-        database = FirebaseDatabase.getInstance();
-        ref = database.getReference("User");
-        listview = findViewById(R.id.listview);
-        oData = new ArrayList<>();
 
-        ref.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                oData.clear();
-                // 파이어베이스로 부터 가져옴.
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Schedule sc = snapshot.getValue(Schedule.class);
-                    oData.add(sc);      // 가져온 데이터를 리스트에 넣고
-                }
-                adapter.notifyDataSetChanged(); // 리스트 저장 및 새로고침.
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-                Log.w("scheduleActivity", "loadPost:onCancelled", databaseError.toException());
-            }
-        });
-        adapter = new ScheduleAdapter(oData, this);
-        listview.setAdapter(adapter);
+
     }
 }
