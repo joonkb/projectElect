@@ -49,7 +49,6 @@ public class ListFragment extends Fragment {
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Schedule sc = snapshot.getValue(Schedule.class);
                     oData.add(sc);      // 가져온 데이터를 리스트에 넣고
-                    Log.i("asd", "안된다능");
                 }
                 adapter.notifyDataSetChanged(); // 리스트 저장 및 새로고침.
             }

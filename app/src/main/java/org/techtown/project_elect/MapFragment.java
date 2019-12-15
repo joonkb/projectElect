@@ -46,7 +46,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
 
     public void onMapReady(final GoogleMap googleMap) {
         mMap = googleMap;
-
         LatLng SEOUL = new LatLng(x, y);
         MarkerOptions markerOptions = new MarkerOptions();
         markerOptions.position(SEOUL);
