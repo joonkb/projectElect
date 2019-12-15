@@ -14,7 +14,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".scheduleActivity" />
         <activity android:name=".InfoActivity" />
-
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyC2VT2_mHZ64rM_ZAGxd-kDfC3m0vDEwW8" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@mipmap/ic_launcher" />

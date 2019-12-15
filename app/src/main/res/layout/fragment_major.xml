@@ -56,17 +56,34 @@
             android:textColor = "#ffffff"
             android:text="조회" />
     </LinearLayout>
-    <LinearLayout
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:orientation="horizontal">
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+ android:layout_gravity="right"
+        android:text="Button" />
+
+    <Button
+        android:layout_gravity="right"
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+</LinearLayout>
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical">
-        <ListView
+        android:layout_height="match_parent">
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:dividerHeight="20dp"
-            android:divider = "#ffffff"
-            android:id="@+id/major_candidate">
-        </ListView>
-    </LinearLayout>
+            android:id="@+id/fragment2">
+        </RelativeLayout>
+    </FrameLayout>
+
 </LinearLayout>
