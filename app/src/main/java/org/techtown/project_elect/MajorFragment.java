@@ -36,7 +36,11 @@ public class MajorFragment extends Fragment {
     private Button people;
     private int[] Uni = {R.array.major_management, R.array.major_agriculture, R.array.major_animal,
             R.array.major_edu, R.array.major_social, R.array.major_it, R.array.major_veterinary, R.array.major_natural, R.array.major_humanities, R.array.major_caluture, R.array.major_dendrology};
-
+    private double[] x={37.869749,37.870427,37.868519,37.870469,37.866289,37.868237,37.868351,37.871738,37.867861,37.869734,37.866795};
+    private double[] y={127.745718,127.746029,127.748935,127.741641,127.740511,127.738837,127.750912,127.742541,127.741216,127.747822,127.747425};
+    private String[] lo={"경영대학","농업생명과학대학","동물생명과학대학","사범대학","사회과학대학","IT대학","수의과학대학","자연과학대학","인문대학","문화예술공과대학" ,"산림환경과학대학"};
+    private String[] inf={"경엉 1호관","농생대 1호관","동생대 1호관","교육2호관","사회과학관","공학 4호관","의학 1호관","자연대 1호관","인문대 1호관","예슐 1호관","산림과학대학 1호관"};
+    private int index;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +80,7 @@ public class MajorFragment extends Fragment {
         univSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                index=position;
                 majorAdapter = ArrayAdapter.createFromResource(getActivity(), Uni[position], android.R.layout.simple_spinner_item);
                 majorSpinner.setAdapter(majorAdapter);
             }
@@ -95,7 +100,7 @@ public class MajorFragment extends Fragment {
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fg = MapFragment.newInstance(37.868320,127.738777,"test","asd");
+                Fragment fg = MapFragment.newInstance(x[index],y[index],lo[index]+" 투표장소",inf[index]);
                 setChildFragment(fg);
             }
         });

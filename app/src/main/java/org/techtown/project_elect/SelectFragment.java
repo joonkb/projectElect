@@ -27,6 +27,8 @@ public class SelectFragment extends Fragment {
     ListView listview;
     List<Major> oData;
     MajorAdapter adapter;
+    String path;
+
     @Override
 
     public void onCreate(Bundle savedInstanceState) {
