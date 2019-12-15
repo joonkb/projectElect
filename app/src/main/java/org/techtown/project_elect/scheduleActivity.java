@@ -50,7 +50,7 @@ public class scheduleActivity extends AppCompatActivity {
                 more_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment, new ListFragment());
+                fragmentTransaction.replace(R.id.frame, new ListFragment());
                 fragmentTransaction.commit();
             }
         });
@@ -65,7 +65,7 @@ public class scheduleActivity extends AppCompatActivity {
                 more_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment, new MajorFragment());
+                fragmentTransaction.replace(R.id.frame, new MajorFragment());
                 fragmentTransaction.commit();
             }
         });
@@ -78,7 +78,7 @@ public class scheduleActivity extends AppCompatActivity {
                 major_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment, new ScheduleFragment());
+                fragmentTransaction.replace(R.id.frame, new ScheduleFragment());
             }
         });
 

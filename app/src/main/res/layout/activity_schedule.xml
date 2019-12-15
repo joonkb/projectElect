@@ -6,11 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".scheduleActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="5dp">
+
         <Button
             android:id="@+id/shedule_list"
             android:layout_width="wrap_content"
@@ -23,6 +25,7 @@
             android:layout_marginRight="8dp"
             android:textSize="18sp"
             android:textStyle="bold" />
+
         <Button
             android:id="@+id/major"
             android:layout_width="wrap_content"
@@ -34,6 +37,7 @@
             android:layout_marginRight="8dp"
             android:textSize="18sp"
             android:textStyle="bold" />
+
         <Button
             android:id="@+id/more"
             android:layout_width="wrap_content"
@@ -47,13 +51,9 @@
             android:textStyle="bold" />
     </LinearLayout>
     <FrameLayout
+        android:id="@+id/frame"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/fragment">
-        </RelativeLayout>
     </FrameLayout>
 </LinearLayout>

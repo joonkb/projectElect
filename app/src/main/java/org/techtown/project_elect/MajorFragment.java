@@ -6,6 +6,8 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,6 +32,8 @@ public class MajorFragment extends Fragment {
     private Spinner majorSpinner;
     private RadioButton a;
     private RadioButton b;
+    private Button map;
+    private Button people;
     private int[] Uni = {R.array.major_management, R.array.major_agriculture, R.array.major_animal,
             R.array.major_edu, R.array.major_social, R.array.major_it, R.array.major_veterinary, R.array.major_natural, R.array.major_humanities, R.array.major_caluture, R.array.major_dendrology};
 
@@ -40,15 +44,17 @@ public class MajorFragment extends Fragment {
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+
         super.onActivityCreated(savedInstanceState);
         univSpinner = (Spinner) getView().findViewById(R.id.univSpinner);
         majorSpinner = (Spinner) getView().findViewById(R.id.majorSpinner);
         a = getView().findViewById(R.id.radioButton1);
         b = getView().findViewById(R.id.radioButton2);
+        map=getView().findViewById(R.id.mapbutton);
+        people=getView().findViewById(R.id.people);
         final Button searching_btn = (Button) getView().findViewById(R.id.search_btn);
         univAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.University, android.R.layout.simple_selectable_list_item);
         univSpinner.setAdapter(univAdapter);
-
         a.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,8 +92,33 @@ public class MajorFragment extends Fragment {
 
             }
         });
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fg = MapFragment.newInstance(37.868320,127.738777,"test","asd");
+                setChildFragment(fg);
+            }
+        });
+        people.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fg = new SelectFragment();
+                setChildFragment(fg);
+
+
+            }
+        });
     }
 
+    private void setChildFragment(Fragment child) {
+        FragmentTransaction childFt = getChildFragmentManager().beginTransaction();
+
+        if (!child.isAdded()) {
+            childFt.replace(R.id.child, child);
+            childFt.addToBackStack(null);
+            childFt.commit();
+        }
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

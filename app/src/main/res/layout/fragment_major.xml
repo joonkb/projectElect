@@ -62,7 +62,7 @@
     android:layout_gravity="right"
     android:orientation="horizontal">
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/people"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
  android:layout_gravity="right"
@@ -70,20 +70,18 @@
 
     <Button
         android:layout_gravity="right"
-        android:id="@+id/button4"
+        android:id="@+id/mapbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="지도보기" />
 </LinearLayout>
     <FrameLayout
+        android:layout_marginTop="2dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/child">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/fragment2">
-        </RelativeLayout>
+
     </FrameLayout>
 
 </LinearLayout>
