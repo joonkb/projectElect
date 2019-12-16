@@ -1,11 +1,13 @@
 package org.techtown.project_elect;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
@@ -27,7 +29,9 @@ public class SelectFragment extends Fragment {
     ListView listview;
     List<Major> oData;
     MajorAdapter adapter;
-    String path;
+    static String strdata;
+    static int[] data;
+
 
     @Override
 
@@ -35,13 +39,20 @@ public class SelectFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
     }
+    public static SelectFragment newInstance(int[] get,String getstr) {
+        data=get;
+        strdata=getstr;
+
+        return new SelectFragment();
+    }
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_select, container, false);
 
         database = FirebaseDatabase.getInstance();
-        ref = database.getReference("Major");
+        ref = database.getReference(strdata);
         listview =view.getRootView().findViewById(R.id.major_candidate);
         oData = new ArrayList<>();
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -60,7 +71,9 @@ public class SelectFragment extends Fragment {
                 Log.w("scheduleActivity", "loadPost:onCancelled", databaseError.toException());
             }
         });
+        MajorAdapter.getin(data);
         adapter = new MajorAdapter(oData, view.getContext());
+
         listview.setAdapter(adapter);
         return view;
     }
