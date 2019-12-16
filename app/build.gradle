@@ -17,6 +17,29 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            res.srcDirs =
+                    [
+
+                            'src/main/res/layouts/animal',
+                            'src/main/res/layouts/it',
+                            'src/main/res/layouts/agriculture',
+                            'src/main/res/layouts/edu',
+                            'src/main/res/layouts/management',
+                            'src/main/res/layouts/social',
+                            'src/main/res/layouts/veterinary',
+                            'src/main/res/layouts/it',
+                            'src/main/res/layouts/dendrology',
+                            'src/main/res/layouts/humanities',
+                            'src/main/res/layouts/natural',
+                            'src/main/res/layouts/caluture',
+                            'src/main/res/layouts/main',
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }
 }
 
 dependencies {

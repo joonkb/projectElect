@@ -41,6 +41,7 @@ public class MajorFragment extends Fragment {
     private String[] lo={"경영대학","농업생명과학대학","동물생명과학대학","사범대학","사회과학대학","IT대학","수의과학대학","자연과학대학","인문대학","문화예술공과대학" ,"산림환경과학대학"};
     private String[] inf={"경엉 1호관","농생대 1호관","동생대 1호관","교육2호관","사회과학관","공학 4호관","의학 1호관","자연대 1호관","인문대 1호관","예슐 1호관","산림과학대학 1호관"};
     private int index;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,6 +114,7 @@ public class MajorFragment extends Fragment {
 
             }
         });
+
     }
 
     private void setChildFragment(Fragment child) {
