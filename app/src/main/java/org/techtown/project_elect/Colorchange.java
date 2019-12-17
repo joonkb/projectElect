@@ -48,9 +48,9 @@ public class Colorchange extends Fragment {
         red.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                more_button.setBackgroundColor(cilckedcolor[3]);
-                schedule_button.setBackgroundColor(color[3]);
-                major_button.setBackgroundColor(color[3]);
+                more_button.setBackgroundColor(cilckedcolor[2]);
+                schedule_button.setBackgroundColor(color[2]);
+                major_button.setBackgroundColor(color[2]);
                 in = 2;
             }
         });
@@ -79,9 +79,9 @@ public class Colorchange extends Fragment {
             @Override
             public void onClick(View v) {
 
-                more_button.setBackgroundColor(cilckedcolor[3]);
-                schedule_button.setBackgroundColor(color[3]);
-                major_button.setBackgroundColor(color[3]);
+                more_button.setBackgroundColor(cilckedcolor[4]);
+                schedule_button.setBackgroundColor(color[4]);
+                major_button.setBackgroundColor(color[4]);
                 in = 4;
             }
         });
