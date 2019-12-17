@@ -3,8 +3,6 @@ package org.techtown.project_elect;
 public class Major {
     String profile1;
     String profile2;
-
-
     String name1;
     String name2;
     String num1;
