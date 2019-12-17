@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
@@ -26,6 +27,7 @@ public class ListFragment extends Fragment {
     ListView listview;
     List<Schedule> oData;
     ScheduleAdapter adapter;
+    TextView tv;
     static int[] col;
     static int index;
 
@@ -49,7 +51,10 @@ public class ListFragment extends Fragment {
 
         database = FirebaseDatabase.getInstance();
         ref = database.getReference("User");
+
         listview = view.getRootView().findViewById(R.id.listview);
+        tv= view.getRootView().findViewById(R.id.textView3);
+        tv.setBackgroundColor(col[index]);
         oData = new ArrayList<>();
 
         ref.addListenerForSingleValueEvent(new ValueEventListener() {

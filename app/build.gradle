@@ -35,6 +35,7 @@ android {
                             'src/main/res/layouts/natural',
                             'src/main/res/layouts/caluture',
                             'src/main/res/layouts/main',
+                            'src/main/res/layouts/major',
                             'src/main/res/layouts',
                             'src/main/res'
                     ]

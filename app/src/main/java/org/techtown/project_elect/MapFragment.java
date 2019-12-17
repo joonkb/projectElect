@@ -54,5 +54,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         mMap.addMarker(markerOptions);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
         mMap.animateCamera(CameraUpdateFactory.zoomTo(17));
+      
     }
 }

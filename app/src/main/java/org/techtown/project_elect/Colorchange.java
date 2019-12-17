@@ -14,6 +14,7 @@ public class Colorchange extends Fragment {
     static int[] cilckedcolor;
     static int[] color;
     static int in;
+    static int ch;
     static Button schedule_button;
     static Button major_button;
     static Button more_button;
@@ -30,7 +31,12 @@ public class Colorchange extends Fragment {
         major_button = b2;
         more_button = b3;
         in=0;
+        ch=0;
         return new Colorchange();
+    }
+    static void check(int a){
+        ch=a;
+
     }
 
 
@@ -38,12 +44,19 @@ public class Colorchange extends Fragment {
         View view = inflater.inflate(R.layout.color, container, false);
 
 
-        RadioButton red = view.findViewById(R.id.red);
-        RadioButton green = view.findViewById(R.id.green);
-        RadioButton orenge = view.findViewById(R.id.orenge);
-        RadioButton black = view.findViewById(R.id.black);
-        RadioButton bule = view.findViewById(R.id.blue);
+        final RadioButton red = view.findViewById(R.id.red);
+        final RadioButton green = view.findViewById(R.id.green);
+        final  RadioButton orenge = view.findViewById(R.id.orenge);
+        final  RadioButton black = view.findViewById(R.id.black);
+        final  RadioButton bule = view.findViewById(R.id.blue);
 
+        switch (ch){
+            case 0:bule.setChecked(true);break;
+            case 1:green.setChecked(true);break;
+            case 2:red.setChecked(true);break;
+            case 3:black.setChecked(true);break;
+            case 4:orenge.setChecked(true);break;
+        }
 
         red.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +65,7 @@ public class Colorchange extends Fragment {
                 schedule_button.setBackgroundColor(color[2]);
                 major_button.setBackgroundColor(color[2]);
                 in = 2;
+
             }
         });
 
@@ -61,6 +75,7 @@ public class Colorchange extends Fragment {
                 more_button.setBackgroundColor(cilckedcolor[3]);
                 schedule_button.setBackgroundColor(color[3]);
                 major_button.setBackgroundColor(color[3]);
+
                 in=3;
             }
         });
@@ -72,6 +87,7 @@ public class Colorchange extends Fragment {
                 schedule_button.setBackgroundColor(color[1]);
                 major_button.setBackgroundColor(color[1]);
                 in = 1;
+
             }
         });
 
@@ -83,6 +99,7 @@ public class Colorchange extends Fragment {
                 schedule_button.setBackgroundColor(color[4]);
                 major_button.setBackgroundColor(color[4]);
                 in = 4;
+
             }
         });
 
@@ -93,6 +110,7 @@ public class Colorchange extends Fragment {
                 schedule_button.setBackgroundColor(color[0]);
                 major_button.setBackgroundColor(color[0]);
                 in = 0;
+
             }
         });
 

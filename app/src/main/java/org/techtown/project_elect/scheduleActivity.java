@@ -49,13 +49,10 @@ public class scheduleActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // ListView 부분을 보이게 해준다.
                 colorcindex=Colorchange.getindex();
-
                 schedule_button.setBackgroundColor(cilckedcolor[colorcindex]);
-
                 major_button.setBackgroundColor(color[colorcindex]);
                 more_button.setBackgroundColor(color[colorcindex]);
                 ListFragment.newInstance(color,colorcindex);
-
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frame, new ListFragment());
@@ -86,6 +83,7 @@ public class scheduleActivity extends AppCompatActivity {
                 major_button.setBackgroundColor(color[colorcindex]);
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                Colorchange.check(colorcindex);
                 fragmentTransaction.replace(R.id.frame, new Colorchange());
                 fragmentTransaction.commit();
             }

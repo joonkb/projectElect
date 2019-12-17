@@ -56,7 +56,7 @@ public class MajorAdapter extends BaseAdapter {
         ImageView iv1 = (ImageView)v.findViewById(R.id.profile1);
         ImageView iv2 = (ImageView)v.findViewById(R.id.profile2);
         Button bnt1=v.findViewById(R.id.info);
-        Button bnt2=v.findViewById(R.id.song);
+
         TextView name1 = (TextView)v.findViewById(R.id.name1);
         TextView name2 = (TextView)v.findViewById(R.id.name2);
 
@@ -66,7 +66,7 @@ public class MajorAdapter extends BaseAdapter {
         TextView intro1 = (TextView)v.findViewById(R.id.intro1);
         TextView intro2 = (TextView)v.findViewById(R.id.intro2);
 
-        TextView select_num = (TextView)v.findViewById(R.id.selectNum);
+        TextView select_num = (TextView)v.findViewById(R.id.select_num);
 
        Glide.with(context).load(m_oData.get(position).getProfile1()).into(iv1);
        Glide.with(context).load(m_oData.get(position).getProfile2()).into(iv2);
