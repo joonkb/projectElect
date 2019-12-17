@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -28,26 +29,33 @@ public class scheduleActivity extends AppCompatActivity {
     ListView listview;
     List<Schedule> oData;
     ScheduleAdapter adapter;
+    int colorcindex=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_schedule);
+        final int[] cilckedcolor={getResources().getColor(R.color.colorPrimaryDark),getResources().getColor(R.color.colorgreendark),getResources().getColor(R.color.colorReddark),getResources().getColor(R.color.colorgray),getResources().getColor(R.color.colororengedark)};
+        final int[] color={getResources().getColor(R.color.colorPrimary),getResources().getColor(R.color.colorgreen),getResources().getColor(R.color.colorRed),getResources().getColor(R.color.colorblack),getResources().getColor(R.color.colororenge)};
 
-        // 상단의 3개의 버튼 객체를 생성함.
+
+
         final Button schedule_button = (Button)findViewById(R.id.shedule_list);
         final Button major_button = (Button)findViewById(R.id.major);
         final Button more_button = (Button)findViewById(R.id.more);
-
+        Colorchange.newInstance(cilckedcolor,color,schedule_button,major_button,more_button);
         // 각각의 버튼을 눌렀을 때 프레그 먼트를 생성해준다.
-
         schedule_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // ListView 부분을 보이게 해준다.
+                colorcindex=Colorchange.getindex();
 
-                schedule_button.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-                major_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                more_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                schedule_button.setBackgroundColor(cilckedcolor[colorcindex]);
+
+                major_button.setBackgroundColor(color[colorcindex]);
+                more_button.setBackgroundColor(color[colorcindex]);
+                ListFragment.newInstance(color,colorcindex);
+
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frame, new ListFragment());
@@ -59,10 +67,10 @@ public class scheduleActivity extends AppCompatActivity {
           major_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                major_button.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-                schedule_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                more_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                colorcindex=Colorchange.getindex();
+                major_button.setBackgroundColor(cilckedcolor[colorcindex]);
+                schedule_button.setBackgroundColor(color[colorcindex]);
+                more_button.setBackgroundColor(color[colorcindex]);
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.frame, new MajorFragment());
@@ -72,16 +80,18 @@ public class scheduleActivity extends AppCompatActivity {
         more_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                more_button.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
-                schedule_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                major_button.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                colorcindex=Colorchange.getindex();
+                more_button.setBackgroundColor(cilckedcolor[colorcindex]);
+                schedule_button.setBackgroundColor(color[colorcindex]);
+                major_button.setBackgroundColor(color[colorcindex]);
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.frame, new ScheduleFragment());
+                fragmentTransaction.replace(R.id.frame, new Colorchange());
+                fragmentTransaction.commit();
             }
         });
 
 
     }
+
 }

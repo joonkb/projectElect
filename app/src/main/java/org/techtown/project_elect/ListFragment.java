@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.fragment.app.Fragment;
@@ -25,11 +26,21 @@ public class ListFragment extends Fragment {
     ListView listview;
     List<Schedule> oData;
     ScheduleAdapter adapter;
+    static int[] col;
+    static int index;
+
     @Override
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+    }
+
+    public static ListFragment newInstance(int[] a, int b) {
+
+        col = a;
+        index = b;
+        return new ListFragment();
     }
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -38,7 +49,7 @@ public class ListFragment extends Fragment {
 
         database = FirebaseDatabase.getInstance();
         ref = database.getReference("User");
-        listview =view.getRootView().findViewById(R.id.listview);
+        listview = view.getRootView().findViewById(R.id.listview);
         oData = new ArrayList<>();
 
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
@@ -52,6 +63,7 @@ public class ListFragment extends Fragment {
                 }
                 adapter.notifyDataSetChanged(); // 리스트 저장 및 새로고침.
             }
+
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.w("scheduleActivity", "loadPost:onCancelled", databaseError.toException());
