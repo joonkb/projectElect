@@ -3,15 +3,13 @@ package org.techtown.project_elect;
 public class Major {
     String profile1;
     String profile2;
-
-
     String name1;
     String name2;
     String num1;
     String num2;
     String intro1;
     String intro2;
-    String select_num;
+    String selectNum;
 
 
     public Major(){
@@ -64,12 +62,12 @@ public class Major {
         this.intro2 = intro2;
     }
 
-    public String getSelected_num() {
-        return select_num;
+    public String getSelectNum() {
+        return selectNum;
     }
 
-    public void setSelected_num(String selected_num) {
-        this.select_num = selected_num;
+    public void setSelectNum(String selectNum) {
+        this.selectNum = selectNum;
     }
     public String getProfile1() {
         return profile1;

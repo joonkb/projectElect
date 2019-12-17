@@ -22,14 +22,12 @@ public class MajorAdapter extends BaseAdapter {
     private Context context;
     private int nListCnt = 0;
     static int[] data;
-
     public MajorAdapter(List<Major> _oData, Context context)
     {
         this.m_oData = _oData;
         this.nListCnt = m_oData.size();
         this.context = context;
     }
-
     @Override
     public int getCount()
     {
@@ -50,13 +48,11 @@ public class MajorAdapter extends BaseAdapter {
 
     static void getin(int[] a){
         data=a;
-
     }
     @Override
     public View getView(final int position, View view, ViewGroup parent)
     {
         View v = View.inflate(context, R.layout.major_list, null);
-
         ImageView iv1 = (ImageView)v.findViewById(R.id.profile1);
         ImageView iv2 = (ImageView)v.findViewById(R.id.profile2);
         Button bnt1=v.findViewById(R.id.info);
@@ -70,10 +66,10 @@ public class MajorAdapter extends BaseAdapter {
         TextView intro1 = (TextView)v.findViewById(R.id.intro1);
         TextView intro2 = (TextView)v.findViewById(R.id.intro2);
 
-        TextView select_num = (TextView)v.findViewById(R.id.select_num);
+        TextView select_num = (TextView)v.findViewById(R.id.selectNum);
 
-      // Glide.with(getView()).load(m_oData.get(position).getProfile1());
-       //Glide.with(getView()).load(m_oData.get(position).getProfile2());
+       Glide.with(context).load(m_oData.get(position).getProfile1()).into(iv1);
+       Glide.with(context).load(m_oData.get(position).getProfile2()).into(iv2);
 
         name1.setText(m_oData.get(position).name1);
         name2.setText(m_oData.get(position).name2);
@@ -84,7 +80,7 @@ public class MajorAdapter extends BaseAdapter {
         intro1.setText(m_oData.get(position).intro1);
         intro2.setText(m_oData.get(position).intro2);
 
-        select_num.setText(m_oData.get(position).select_num);
+        select_num.setText(m_oData.get(position).selectNum);
 
 
         bnt1.setOnClickListener(new View.OnClickListener() {
