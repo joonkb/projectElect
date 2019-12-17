@@ -100,7 +100,7 @@
         android:textStyle="bold"
         android:text="기호:" />
         <TextView
-            android:id="@+id/select_num"
+            android:id="@+id/selectNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize = "15sp"
