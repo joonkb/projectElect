@@ -28,7 +28,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         return inflater.inflate(R.layout.fragment_map, container, false);
     }
 
-    public static MapFragment newInstance(double tx, double ty, String tlo, String tinf) {
+      public static MapFragment newInstance(double tx, double ty, String tlo, String tinf) {
         x = tx;
         y = ty;
         lo = tlo;
